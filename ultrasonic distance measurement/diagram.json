@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Mithrabala Subramanian",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -70.2, "left": -333.2, "attrs": {} },
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -17.7, "left": -263.3, "attrs": {} }
+  ],
+  "connections": [
+    [ "ultrasonic1:VCC", "bb1:13b.i", "", [ "$bb" ] ],
+    [ "ultrasonic1:TRIG", "bb1:14b.i", "", [ "$bb" ] ],
+    [ "ultrasonic1:ECHO", "bb1:15b.i", "", [ "$bb" ] ],
+    [ "ultrasonic1:GND", "bb1:16b.i", "", [ "$bb" ] ],
+    [ "nano:GND.1", "ultrasonic1:GND", "black", [ "v14.4", "h-307.7" ] ],
+    [ "ultrasonic1:VCC", "nano:5V", "red", [ "v-9.6", "h316.8" ] ],
+    [ "ultrasonic1:TRIG", "nano:9", "green", [ "v-67.2", "h230" ] ],
+    [ "ultrasonic1:ECHO", "nano:10", "green", [ "v-67.2", "h210.4" ] ]
+  ],
+  "dependencies": {}
+}
